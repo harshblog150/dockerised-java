@@ -1,0 +1,9 @@
+version: '2'
+services:
+  web:
+          image: harshblog150/tomcat8:jdk8
+    ports: 
+      - "8088:8080"
+    volumes:
+      - ./target/DockerExample.war:/usr/local/tomcat/webapps/ROOT.war
+      - ./target/DockerExample:/usr/local/tomcat/webapps/ROOT
